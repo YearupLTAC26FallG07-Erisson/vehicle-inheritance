@@ -2,33 +2,14 @@ package com.pluralsight;
 
 public class Main {
     public static void main(String[] args) {
-        Moped slowRide = new Moped();
-        slowRide.setColor("Red");
-        slowRide.setFuelCapacity(5);
-        slowRide.setNumberOfPassengers(1);
-        slowRide.setCargoCapacity(10);
+        Moped slowRide = new Moped("Red", 1, 0, 5);
+        Car familyCar = new Car("Blue", 5, 50, 15);
+        SemiTruck bigRig = new SemiTruck("White", 2, 40000, 150);
+        Hovercraft swampGlider = new Hovercraft("Yellow", 4, 500, 30);
 
-        Car familyCar = new Car();
-        familyCar.setColor("Blue");
-        familyCar.setFuelCapacity(15);
-        familyCar.setNumberOfPassengers(5);
-        familyCar.setCargoCapacity(50);
-
-        SemiTruck bigRig = new SemiTruck();
-        bigRig.setColor("White");
-        bigRig.setFuelCapacity(150);
-        bigRig.setNumberOfPassengers(2);
-        bigRig.setCargoCapacity(40000);
-
-        Hovercraft swampGlider = new Hovercraft();
-        swampGlider.setColor("Yellow");
-        swampGlider.setFuelCapacity(30);
-        swampGlider.setNumberOfPassengers(4);
-        swampGlider.setCargoCapacity(500);
-
-        System.out.println("Moped: Color = " + slowRide.getColor() + ", Fuel = " + slowRide.getFuelCapacity() + " gal, Passengers = " + slowRide.getNumberOfPassengers() + ", Cargo = " + slowRide.getCargoCapacity() + " lbs");
-        System.out.println("Car: Color = " + familyCar.getColor() + ", Fuel = " + familyCar.getFuelCapacity() + " gal, Passengers = " + familyCar.getNumberOfPassengers() + ", Cargo = " + familyCar.getCargoCapacity() + " lbs");
-        System.out.println("SemiTruck: Color = " + bigRig.getColor() + ", Fuel = " + bigRig.getFuelCapacity() + " gal, Passengers = " + bigRig.getNumberOfPassengers() + ", Cargo = " + bigRig.getCargoCapacity() + " lbs");
-        System.out.println("Hovercraft: Color = " + swampGlider.getColor() + ", Fuel = " + swampGlider.getFuelCapacity() + " gal, Passengers = " + swampGlider.getNumberOfPassengers() + ", Cargo = " + swampGlider.getCargoCapacity() + " lbs");
+        System.out.println("Moped: Color = " + slowRide.getColor() + ", Passengers = " + slowRide.getNumberOfPassengers() + ", Cargo = " + slowRide.getCargoCapacity() + " lbs, Fuel = " + slowRide.getFuelCapacity() + " gal");
+        System.out.println("Car: Color = " + familyCar.getColor() + ", Passengers = " + familyCar.getNumberOfPassengers() + ", Cargo = " + familyCar.getCargoCapacity() + " lbs, Fuel = " + familyCar.getFuelCapacity() + " gal");
+        System.out.println("SemiTruck: Color = " + bigRig.getColor() + ", Passengers = " + bigRig.getNumberOfPassengers() + ", Cargo = " + bigRig.getCargoCapacity() + " lbs, Fuel = " + bigRig.getFuelCapacity() + " gal");
+        System.out.println("Hovercraft: Color = " + swampGlider.getColor() + ", Passengers = " + swampGlider.getNumberOfPassengers() + ", Cargo = " + swampGlider.getCargoCapacity() + " lbs, Fuel = " + swampGlider.getFuelCapacity() + " gal");
     }
 }
